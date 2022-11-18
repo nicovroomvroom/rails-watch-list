@@ -1,0 +1,10 @@
+<div class="container">
+  <h1><%= @list.name %></h1>
+  <ul>
+    <% @list.bookmarks.each do |bookmark| %>
+      <li><%= bookmark.overview %></li>
+    <% end %>
+  </ul>
+
+  <%= link_to "Back to all lists", lists_path, class: "btn btn-primary" %>
+</div>
